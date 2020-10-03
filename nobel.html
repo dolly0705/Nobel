@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;500;700;900&family=Rozha+One&family=Sigmar+One&display=swap" rel="stylesheet">
+    <style>
+    body {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+h1,h2,h4{
+  color: rgb(73, 46, 35);
+      font-family: 'Noto Sans TC', sans-serif;
+      font-weight: 300;
+}
+p,span{
+  color: rgb(73, 46, 35);
+      font-family: 'Noto Sans TC', sans-serif;
+      font-weight: 200;
+}
+    .top_block {
+      background: -webkit-linear-gradient(rgb(255, 225, 189),rgb(253, 249, 238));
+background: -o-linear-gradient(rgb(255, 225, 189),rgb(253, 249, 238));
+background: -moz-linear-gradient(rgb(255, 225, 189),rgb(253, 249, 238));
+background: linear-gradient(rgb(255, 225, 189),rgb(253, 249, 238));
+
+
+
+    }
+
+    /* 首頁 */
+    .block01 {
+
+      padding-top : 40px;
+      height: 970px;
+
+    }
+
+    .Nobel {
+      position: absolute;
+      left: 40px;
+      top: 40px;
+      z-index: 5;
+    }
+
+    .hamburger {
+      position: absolute;
+      right: 40px;
+      top: 40px;
+      z-index: 5;
+
+    }
+
+    .home_image_frame {
+      width: 920px;
+      height: 930px;
+     
+      margin: auto;
+      position: relative;
+
+      display: flex;
+    }
+
+    .imglittle01 {
+      height:335px;
+      width: 290px;
+      
+      background-color: rgba(255, 255, 255,0.4);
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .imglittle02 {
+      height:272px;
+      width: 525px;
+      background-color: rgba(255, 255, 255,0.4);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      z-index: 1;
+    }
+
+    .imglittle03 {
+      height:355px;
+      width:355px;
+      background-color: rgba(255, 255, 255,0.4);
+
+      margin-top: 230px;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      z-index: 1;
+    }
+
+    .home_image {
+      height: 750px;
+      width: 525px;
+      background-image: url(img/首頁圖.jpg);
+      position: absolute;
+      right: calc(50% - 280px);
+     top: calc(50% - 400px);
+
+      /* align-items: center;
+      justify-content: center; */
+      /* margin: auto; */
+      /*align-content: center;為什麼沒打就上下置中 */
+
+      display: flex;
+    }
+
+    .logo {
+      height: 400px;
+      width:400px;
+      background-image: url(img/logo.svg);
+background-repeat: no-repeat;
+
+      position: absolute;
+      right: calc(50% - 240px);
+     top: calc(50% - 200px);
+     z-index: 2;
+    }
+
+    .checklist {
+      height: 65px;
+      width: 100%;
+
+      color: rgb(73, 46, 35);
+      font-family: 'Noto Sans TC', sans-serif;
+      font-weight: 300;
+      
+      position: absolute;
+      bottom: 0;
+
+      display: flex;
+      justify-content: center;
+      /* align-content: center;為什麼不能上下置中 */
+
+z-index: 2;
+    }
+
+    .Options {
+      padding: 0 10px 0 10px;
+      line-height: 65px;
+    }
+
+
+    /* 關於我們 */
+
+    .block02 {
+      /* background-color: rgb(33, 149, 243); */
+      height: 600px;
+      padding-top: 200px;
+      padding-bottom: 150px;
+    }
+
+    .about_padding {
+      padding-bottom: 20px;
+      font-size: 40px;
+      color: rgb(73, 46, 35);
+      font-family: 'Noto Sans TC', sans-serif;
+      font-weight: 300;
+    }
+
+    /* 最新資訊 */
+    .block03 {
+
+      padding-bottom: 150px;
+      
+    }
+
+    .new_content_img {
+      width: 100%;
+    }
+
+    .latest_news_NEW p {
+      font-size: 150px;
+
+      transform: rotate(-90deg);     /* 文字逆轉90度 */
+      margin-top: 260px;
+
+      font-family: 'Rozha One', serif;
+color: rgb(245, 180, 137);
+
+    }
+
+    .latest_news_content {
+      border: 2px solid rgb(242, 146, 81);
+      background-color: rgb(255, 245, 238);
+      height: 1000px;
+      padding: 40px;
+
+      box-shadow: 20px 20px 0px 0px rgb(245, 191, 141);
+
+    }
+
+    .latest_news_title {
+      text-align: center;
+      margin: auto;
+
+
+    }
+
+    /* 新品 排行 */
+    .pre_order,.billboard {
+            height: 900px;
+
+
+            display: flex;
+        }
+
+        .pre_order_left,
+        .billboard_left {
+            height: 100%;
+            width: 40%;
+            background-color: rgb(247, 233, 205);
+            padding: 90px 0px 90px 0px;
+
+            position: relative;
+        }
+
+        .billboard_left {
+            background-color: rgb(244, 210, 159);
+        }
+
+        .pre_order_right,
+        .billboard_right {
+            height: 100%;
+            width: 60%;
+            background-color: rgb(244, 210, 159);
+            position: relative;
+        }
+
+        .billboard_right {
+            background-color: rgb(247, 233, 205);
+            position: relative;
+        }
+
+        .pre_order_title {
+            width: 300px;
+            position: absolute;
+            right: 0;
+        }
+
+        .classification {
+            width: 300px;
+            position: absolute;
+            right: 0;
+            bottom: 90px;
+        }
+
+        .circle {
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            background-color: crimson;
+
+            position: absolute;
+            left: -7.5px;
+            top: 15px;
+        }
+
+        .classification {
+            position: absolute;
+            bottom: 125px;
+            border-left: 1px solid crimson;
+            padding-left: 20px;
+        }
+
+        .newbillboard_classification01 {
+            padding: 10px 0px 10px 0px;
+            color: rgb(73, 46, 35);
+        }
+
+        .new_book {
+            width: 411px;
+            height: 590px;
+            background-color: palegreen;
+
+            box-shadow: 10px 10px 0px 0px rgba(234, 181, 110, 1);
+            position: absolute;
+            top: calc(50% - 295px);
+            left: 10%;
+        }
+
+        .new_book_text {
+            position: absolute;
+            right: -20%;
+            bottom: -20%;
+
+            background-color: rgb(247, 233, 205);
+            color: rgb(73, 46, 35);
+
+            padding: 15px;
+        }
+
+        .billboard_books {
+            height: 800px;
+            width: 600px;
+            position: absolute;
+            top: 70px;
+            left: 150px;
+        }
+
+        .billboard_right_col {
+            width: 175px;
+            height: 225px;
+            background-color: chocolate;
+            border: 1px solid darkslategray;
+            margin: 20px;
+        }
+   
+
+    /* 獨家 優惠 關於 */
+    .bottom_block {
+      background-color: rgb(253, 249, 238);
+
+    }
+
+    /* 獨家 */
+    .exclusive {
+      padding: 150px 0px 150px 0px;
+    }
+
+    .exclusive_img_block {
+      background-color: red;
+      height: 500px;
+    }
+
+    .exclusive_img01 {
+      width: 400px;
+      height: 400px;
+      background-color: rgb(214, 152, 152);
+    }
+
+    .exclusive_img02 {
+      width: 200px;
+      height: 200px;
+      background-color: rgb(133, 88, 88);
+      position: absolute;
+      right: 15px;
+      bottom: 0;
+    }
+
+    /* 優惠推薦 */
+    .Discount {
+      height: 600px;
+      display: flex;
+    }
+
+    .Discount_left {
+      width: 40%;
+      padding-left: 180px;
+    }
+
+    .Discount_right {
+      padding: 100px 0px 100px 0px;
+      width: 60%;
+      background-color: rgb(247, 233, 205);
+      position: relative;
+    }
+
+    .Discount_right_img {
+      height: 400px;
+      width: 400px;
+      background-color: rgb(242, 146, 81);
+      position: absolute;
+      left: -200px;
+
+      box-shadow: 10px 10px 0px 0px rgba(244, 210, 159, 1);
+
+    }
+
+    .Discount_right_text {
+      padding-top: 100px;
+
+      position: absolute;
+      left: 220px;
+
+    }
+
+    /* 聯絡資訊 */
+    .connection {
+      padding: 150px 0px 150px 0px;
+    }
+
+    .connection_img {
+      width: 255px;
+      height: 170px;
+      background-color: black;
+      /* position: absolute;
+      right: 10px; */
+    }
+
+    .connection_content {
+
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* footer */
+    .footer {
+      background-color: rgb(244, 210, 159);
+      height: 150px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .topbox {
+      width: 100px;
+      height: 100px;
+      background-color: rgb(247, 233, 205);
+
+
+      position: absolute;
+      top: -50px;
+
+    }
+
+    .footer_content {
+      padding-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <div class="container">
+        container限制寬度 12欄位左右留白-->
+  <!-- container~fluid幾乎滿版-->
+  <!-- 576以下xs 576sm 768md 992lg (大於1200執行)xl -->
+
+  <!--<div class="row justify-content-md-center">
+          <div class="col col-lg-2">
+            1 of 3
+          </div>
+          <div class="col-md-auto">
+            Variable width content
+          </div>
+          <div class="col col-lg-2">
+            3 of 3
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            1 of 3
+          </div>
+          <div class="col-md-auto">
+            Variable width content
+          </div>
+          <div class="col col-lg-2">
+            3 of 3
+          </div>
+        </div>
+     </div> -->
+
+  <div class="top_block">
+    <div class="block01 ">
+
+      <div class="Nobel">諾貝爾圖書城</div>
+      <div class="hamburger">123</div>
+
+      <div class="home_image_frame">
+        <div class="imglittle01"></div>
+        <div class="imglittle02"></div>
+        <div class="imglittle03"></div>
+        <div class="home_image"></div>
+        <div class="logo"></div>
+      
+
+        <div class="checklist">
+          <div class="Options">關於我們</div>
+          <div class="Options">最新資訊</div>
+          <div class="Options">新品預購</div>
+          <div class="Options">銷售排行</div>
+          <div class="Options">獨家商品</div>
+          <div class="Options">優惠推薦</div>
+          <div class="Options">聯絡資訊</div>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="block02 container align-middle">
+      <h2 class="row about_padding">
+        關於我們
+      </h2>
+      <div class="row about_content">
+        <div class="col-2">
+          <span>成立於</span>
+          <h1>1987</h1>
+
+        </div>
+        <div class="col-auto"></div>
+
+        <div class="col-9">
+          <h4 class="">「禮讚書香社會、豐盛文化饗宴」</h4>
+          <span>禮讚書香社會、豐盛文化饗宴是諾貝爾書局從1987
+            年創立以來所秉持的理念，主要就是為了提升文化風氣為宗旨，更以「親切服務，正派經營」為理念，因此，對人文藝術的推動更是不遺餘力，到目前為止諾貝爾書局不但在中台灣地區拓展了他們的事業版圖，使中台灣地區蘊含著濃濃的書香氣息，在台灣消費者心中也成功塑造出在這裡買不到的，別的書局也不會有；別的書店買不到，到諾貝爾就有希望的品牌形象。
+
+          </span>
+        </div>
+
+      </div>
+    </div>
+    <div class="block03 ">
+      <div class="latest_news container">
+        <div class="row ">
+          <div class="col-2 latest_news_NEW ">
+            <p>NEW</p>
+          </div>
+          <div class="col-10">
+            <div class="latest_news_title pb-2">
+              <h2>最新消息</h2>
+            </div>
+            <div class="latest_news_title pb-5">
+              <h4>2020瑪民認證簽書會《貓咪哪有那麼可愛》《貓咪超有事》</h4>
+            </div>
+            <div class="latest_news_content">
+              <b style="font-size: 24px;">主角│志銘與狸貓</b>
+              <p style="font-size: 20px;">活動日期 2020年9月27日<br>
+                09/27 (日) 2:00pm-5:00pm│站前店 B1 藝文西廣場</p>
+              <img src="img/new.jpg" alt="照片不見了" class="new_content_img py-4">
+              <p>憑號碼牌可參與有獎徵答、獲得參加獎、瑪民認證編號，還有令人尖叫的神秘嘉賓會出現喔！
+                <br>
+                <br>
+                參加辦法│<br>
+                1. 活動當天10:15，於台北誠品站前店入口前，出示新書《貓咪哪有那麼可愛》領取號碼牌。<br>
+                2. 限量300張，每人限領一張，每張限一人使用。<br>
+                3. 簽名過程可拍照、不屬名。<br>
+                4. 可簽舊書，限簽七本，但其中一定要包含新書。</p>
+              <p style="font-size:15px; " class="py-5">主辦單位│布克文化<br>
+                聯絡電話│02-25007008#2201 <br>
+                備註說明│如活動因氣候或其他因素暫停或變動，請依現場公告為準。</p>
+            </div>
+  
+          </div>
+  
+        </div>
+  
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="pre_order">
+    <div class="pre_order_left">
+        <div class="pre_order_title">
+            <h2> 新品預購</h2>
+        </div>
+
+
+        <div class="classification">
+            <div class="circle"></div>
+
+            <div class="newbillboard_classification01">
+                藝術<br>
+                Art Designs
+            </div>
+            <div class="newbillboard_classification01">
+                文學作品、小說<br>
+                Literature & fiction
+            </div>
+            <div class="newbillboard_classification01">
+                商業<br>
+                Business & Finance
+            </div>
+            <div class="newbillboard_classification01">
+                兒童<br>
+                Children's book
+            </div>
+        </div>
+
+    </div>
+    <div class="pre_order_right">
+        <div class="new_book">
+            <div class="new_book_text">
+                <p> 作者 ／ 坂元裕二<br>
+                    譯者 ／ 黃耀進<br>
+                    出版社 ／ 光生出版<br>
+                    出版日期 ／ 2020/09/02<br>
+                    商品語言 ／ 中文/繁體<br>
+                    裝訂 ／ 平裝<br>
+                    定價 ／ NT$680<br>
+                    售價 ／ 79折, NT$ 537</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="billboard">
+    <div class="billboard_left">
+        <div class="pre_order_title">
+            <h2> 銷售排行</h2>
+        </div>
+
+
+        <div class="classification">
+            <div class="circle"></div>
+
+            <div class="newbillboard_classification01">
+                藝術<br>
+                Art Designs
+            </div>
+            <div class="newbillboard_classification01">
+                文學作品、小說<br>
+                Literature & fiction
+            </div>
+            <div class="newbillboard_classification01">
+                商業<br>
+                Business & Finance
+            </div>
+            <div class="newbillboard_classification01">
+                兒童<br>
+                Children's book
+            </div>
+        </div>
+
+    </div>
+    <div class="billboard_right">
+        <div class="billboard_books">
+            <div class="row billboard_right_row">
+                <div class="col billboard_right_col"></div>
+                <div class="col billboard_right_col"></div>
+                <div class="col billboard_right_col"></div>
+
+            </div>
+            <div class="row billboard_right_row">
+                <div class="col billboard_right_col"></div>
+                <div class="col billboard_right_col"></div>
+                <div class="col billboard_right_col"></div>
+            </div>
+            <div class="row billboard_right_row">
+                <div class="col billboard_right_col"></div>
+                <div class="col billboard_right_col"></div>
+                <div class="col billboard_right_col"></div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+  <div class="bottom_block">
+    <div class="exclusive container">
+      <div class="row">
+        <div class="col-4">
+
+          <h2 class="pb-5">獨家商品</h2>
+
+          <span>
+            <h4>MONO Smoky組合包</h4>
+          </span>
+          <p>85折 <b style="font-size: 30px;color: rgb(239, 67, 0);">272元</b> </p>
+
+          <p class="pt-5">內容:<br>
+            Smoky系列橡皮擦+自動鉛筆+口紅膠<br>
+            +Tombow點點筆<br>
+            搭配Tombow 50th週年限量束口袋<br>
+            <br>
+            共有五色:<br>
+            MONO Smoky組合包-奶油白<br>
+            MONO Smoky組合包-霧灰棕<br>
+            MONO Smoky組合包-青瓷綠<br>
+            MONO Smoky組合包-玫瑰粉<br>
+            MONO Smoky組合包-芋香紫<br>
+          </p>
+
+        </div>
+        <div class="col-8">
+          <div class="exclusive_img_block">
+            <div class="exclusive_img01"></div>
+            <div class="exclusive_img02"></div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="Discount">
+      <div class="Discount_left">
+        <h2>優惠推薦</h2>
+      </div>
+      <div class="Discount_right">
+        <div class="Discount_right_img"></div>
+        <div class="Discount_right_text">
+          <p>Nakabayashi Taccia鋼筆墨水/ <br>
+            TFPI-WD42-15/<br>
+            浮世繪．喜多川歌麿/ 歌麿薄墨<br>
+            <br>
+            9折, 540元<br>
+
+            品牌 ／ 日本-Nakabayashi<br>
+            顏色 ／<br>
+            原價 ／ $600元</p>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="connection container">
+      <div class="row">
+        <div class="col">
+
+        </div>
+        <div class="col-10 connection_content">
+          <h2>聯絡資訊</h2>
+          <p 
+          >
+            地址: 台中市公益路186-2號 <br>
+            電話: 04 2320 4007<br>
+            信箱: kind@nobelbook.com.tw<br>
+            網站: http://www.nobelbook.com.tw<br>
+          </p>
+          <div class="connection_img"></div>
+        </div>
+        <div class="col">
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="footer">
+    <div class="topbox"></div>
+    <div class="footer_content">
+      <p> 隱私權政策</p>
+      <p>諾貝爾圖書有限公司 Nobel Bookstore Co., Ltd. </p>
+    </div>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
